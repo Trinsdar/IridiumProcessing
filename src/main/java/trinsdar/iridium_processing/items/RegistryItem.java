@@ -5,6 +5,7 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
+import trinsdar.iridium_processing.blocks.RegistryBlock;
 
 public class RegistryItem {
     public static final Item itemIridium = new ItemIridium("itemIridium");
@@ -25,10 +26,12 @@ public class RegistryItem {
     }
 
     public static void registerModels() {
+//        itemIridium.registerItemModel();
     }
 
     @SubscribeEvent
     public static void registerItems(ModelRegistryEvent event) {
         RegistryItem.registerModels();
+        RegistryBlock.registerModels();
     }
 }

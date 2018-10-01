@@ -42,5 +42,10 @@ public class RegistryBlock {
         }
     }
 
+    public static void registerModels() {
+//        blockOre.registerItemModel(Item.getItemFromBlock(blockOre));
+//        blockEndOre.registerItemModel(Item.getItemFromBlock(blockEndOre));
+//        blockNetherOre.registerItemModel(Item.getItemFromBlock(blockNetherOre));
+    }
 
 }

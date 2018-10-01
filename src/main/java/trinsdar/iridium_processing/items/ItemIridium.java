@@ -3,6 +3,7 @@ package trinsdar.iridium_processing.items;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
+import trinsdar.iridium_processing.IridiumProcessing;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,4 +48,9 @@ public class ItemIridium extends ItemBase {
         return itemList;
     }
 
+    public void registerItemModel(ItemStack itemStack) {
+        for (int i = 0; i < itemIridium.length; i++) {
+            IridiumProcessing.proxy.registerItemRenderer(this, i, itemIridium[itemStack.getMetadata()]);
+        }
+    }
 }
